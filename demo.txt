@@ -1,0 +1,134 @@
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:1: NOTICE:  drop cascades to 20 other objects
+DETAIL:  drop cascades to table owner
+drop cascades to table venue
+drop cascades to table concert
+drop cascades to table section
+drop cascades to table seat
+drop cascades to table users
+drop cascades to table price
+drop cascades to table ticket
+drop cascades to table purchase
+drop cascades to table q1
+drop cascades to view ticketsold
+drop cascades to view ticketwithsectionsold
+drop cascades to view ticketsoldwithprice
+drop cascades to view concertwithsectionid
+drop cascades to view concertwithcount
+drop cascades to view report
+drop cascades to table q2
+drop cascades to table q3
+drop cascades to table q4
+drop cascades to view alluserwithcount
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+SET
+INSERT 0 2
+INSERT 0 3
+INSERT 0 7
+INSERT 0 6
+INSERT 0 76
+INSERT 0 3
+INSERT 0 13
+INSERT 0 7
+INSERT 0 7
+
+-------------------- Query 1: -----------------------------------
+
+SET
+psql:q1.sql:2: NOTICE:  table "q1" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q1.sql:13: NOTICE:  view "ticketsold" does not exist, skipping
+DROP VIEW
+psql:q1.sql:14: NOTICE:  view "ticketwithsectionsold" does not exist, skipping
+DROP VIEW
+psql:q1.sql:15: NOTICE:  view "ticketsoldwithprice" does not exist, skipping
+DROP VIEW
+psql:q1.sql:16: NOTICE:  view "concertwithsectionid" does not exist, skipping
+DROP VIEW
+psql:q1.sql:17: NOTICE:  view "concertwithcount" does not exist, skipping
+DROP VIEW
+psql:q1.sql:18: NOTICE:  view "report" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 7
+
+ concert_id |              name              |      datetime       | value |      percentage
+------------+--------------------------------+---------------------+-------+----------------------
+        201 | Ron Sexsmith                   | 2022-12-03 19:30:00 |   130 |                 0.04
+        202 | Women's Blues Review           | 2022-11-25 20:00:00 |   275 |                 0.08
+        203 | Mariah Carey - Merry Christmas | 2022-12-09 20:00:00 |   986 |  0.03333333333333333
+        204 | Mariah Carey - Merry Christmas | 2022-12-11 20:00:00 |   388 |  0.06666666666666667
+        205 | TSO - Elf                      | 2022-12-09 19:30:00 |     0 |                    0
+        206 | TSO - Elf                      | 2022-12-10 14:30:00 |     0 |                    0
+        207 | TSO - Elf                      | 2022-12-10 19:30:00 |   159 | 0.047619047619047616
+(7 rows)
+
+
+-------------------- Query 2: -----------------------------------
+
+SET
+psql:q2.sql:2: NOTICE:  table "q2" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+INSERT 0 2
+
+ owner_id |                        name                         | num
+----------+-----------------------------------------------------+-----
+        1 | The Corporation of Massey Hall and Roy Thomson Hall |   2
+        2 | Maple Leaf Sports & Entertainment                   |   1
+(2 rows)
+
+
+-------------------- Query 3: -----------------------------------
+
+SET
+psql:q3.sql:2: NOTICE:  table "q3" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+INSERT 0 3
+
+ concert_id |              name              |      datetime       | value |      percentage
+------------+--------------------------------+---------------------+-------+----------------------
+        201 | Ron Sexsmith                   | 2022-12-03 19:30:00 |   130 |                 0.04
+        202 | Women's Blues Review           | 2022-11-25 20:00:00 |   275 |                 0.08
+        203 | Mariah Carey - Merry Christmas | 2022-12-09 20:00:00 |   986 |  0.03333333333333333
+        204 | Mariah Carey - Merry Christmas | 2022-12-11 20:00:00 |   388 |  0.06666666666666667
+        205 | TSO - Elf                      | 2022-12-09 19:30:00 |     0 |                    0
+        206 | TSO - Elf                      | 2022-12-10 14:30:00 |     0 |                    0
+        207 | TSO - Elf                      | 2022-12-10 19:30:00 |   159 | 0.047619047619047616
+(7 rows)
+
+
+-------------------- Query 4: -----------------------------------
+
+SET
+psql:q4.sql:2: NOTICE:  table "q4" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q4.sql:9: NOTICE:  view "alluserwithcount" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 1
+
+ username | num
+----------+-----
+ cristonc |   3
+(1 row)
